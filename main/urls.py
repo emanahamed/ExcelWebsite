@@ -1,0 +1,30 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('about-us/', views.about_us, name='about_us'),
+    path('tuition/primary-school/', views.primary_school_tuition, name='primary_school_tuition'),
+    path('tuition/11-entrance/', views.eleven_plus_tuition, name='eleven_plus_tuition'),
+    path('tuition/gcse/', views.gcse_tuition, name='gcse_tuition'),
+    path('tuition/a-level/', views.a_level_tuition, name='a_level_tuition'),
+    path('tuition/entrance-exam/', views.entrance_exam_tuition, name='entrance_exam_tuition'),
+    path('tuition/university-admission-preparation/', views.university_admission_preparation, name='university_admission_preparation'),
+    path('tuition/summer-school/', views.summer_school, name='summer_school'),
+    path('exam-centre/why-choose-us/', views.why_choose_us, name='why_choose_us'),
+    path('exam-centre/gcse-private-exams/', views.gcse_private_exams, name='gcse_private_exams'),
+    path('exam-centre/a-level-private-exams/', views.a_level_private_exams, name='a_level_private_exams'),
+    path('exam-centre/university-admission-test/', views.university_admission_test, name='university_admission_test'),
+    path('exam-centre/functional-skills/', views.functional_skills_exam_centre, name='functional_skills_exam_centre'),
+    path('exam-centre/pearson-vue/', views.pearson_vue_exam_centre, name='pearson_vue_exam_centre'),
+    path('exam-centre/aat/', views.aat_exam_centre, name='aat_exam_centre'),
+    path('exam-centre/trinity/', views.trinity_exam_centre, name='trinity_exam_centre'),
+    path('exam-centre/apply-online/', views.apply_online, name='apply_online_exam'),
+    path('exam-centre/private-exam-fees/', views.private_exam_fees, name='private_exam_fees'),
+    path('english-centre/esol/', views.esol, name='esol'),
+    path('english-centre/b1-exam/', views.b1_exam, name='b1_exam'),
+    path('english-centre/trinity/', views.trinity_english_centre, name='trinity_english_centre'),
+    path('contact-us/', views.contact_us, name='contact_us'),
+    path('enroll/', views.contact_us, name='enroll'),
+    path('careers/', views.careers, name='careers'),
+]

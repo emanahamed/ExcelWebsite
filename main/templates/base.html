@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+    {% load static %}
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <title>
+        Excel Tutors - {% block title %}{% endblock %}
+    </title>
+    <!-- Fonts and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
+    <!-- Nucleo Icons -->
+    <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet"/>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet"/>
+    <!-- CSS Files -->
+    <link id="pagestyle" href="{% static 'css/soft-design-system-pro.css' %}" rel="stylesheet"/>
+</head>
+<body class="automotive">
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg blur blur-rounded top-0 z-index-3 shadow position-absolute mt-4 my-3 py-2 start-0 end-0 mx-4">
+                <div class="container-fluid px-0">
+                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="{% url 'home' %}">
+                        <img src="{% static 'img/logos/excel tutors logo 2023.png' %}" height="45px">
+                    </a>
+                    <a href="{% url 'enroll' %}" class="btn btn-sm bg-gradient-primary btn-round mb-0 ms-auto d-lg-none d-block">Enroll Now</a>
+                    <button class="navbar-toggler shadow-none ms-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon mt-2">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+                        <ul class="navbar-nav navbar-nav-hover mx-auto">
+                            <li class="nav-item">
+                                <a href="{% url 'home' %}" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'about_us' %}" class="nav-link">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown dropdown-hover mx-2">
+                                <a role="button" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuTuition" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tuition
+                                    <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-animation dropdown-xl p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuTuition">
+                                    <div class="d-none d-lg-block">
+                                        <div class="row">
+                                            <div class="col-12 px-4 py-2">
+                                                <a href="{% url 'primary_school_tuition' %}" class="dropdown-item border-radius-md">Primary School Tuition</a>
+                                                <a href="{% url 'eleven_plus_tuition' %}" class="dropdown-item border-radius-md">11+ Entrance Tuition</a>
+                                                <a href="{% url 'gcse_tuition' %}" class="dropdown-item border-radius-md">GCSE Tuition</a>
+                                                <a href="{% url 'a_level_tuition' %}" class="dropdown-item border-radius-md">A Level Tuition</a>
+                                                <a href="{% url 'entrance_exam_tuition' %}" class="dropdown-item border-radius-md">Entrance Exam Tuition</a>
+                                                <a href="{% url 'university_admission_preparation' %}" class="dropdown-item border-radius-md">University Admission Preparation</a>
+                                                <a href="{% url 'summer_school' %}" class="dropdown-item border-radius-md">Summer School</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-none">
+                                        <a href="{% url 'primary_school_tuition' %}" class="dropdown-item border-radius-md">Primary School Tuition</a>
+                                        <a href="{% url 'eleven_plus_tuition' %}" class="dropdown-item border-radius-md">11+ Entrance Tuition</a>
+                                        <a href="{% url 'gcse_tuition' %}" class="dropdown-item border-radius-md">GCSE Tuition</a>
+                                        <a href="{% url 'a_level_tuition' %}" class="dropdown-item border-radius-md">A Level Tuition</a>
+                                        <a href="{% url 'entrance_exam_tuition' %}" class="dropdown-item border-radius-md">Entrance Exam Tuition</a>
+                                        <a href="{% url 'university_admission_preparation' %}" class="dropdown-item border-radius-md">University Admission Preparation</a>
+                                        <a href="{% url 'summer_school' %}" class="dropdown-item border-radius-md">Summer School</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown dropdown-hover mx-2">
+                                <a role="button" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuExamCentre" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Private Exam Centre
+                                    <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-animation dropdown-xl p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuExamCentre">
+                                    <div class="d-none d-lg-block">
+                                        <div class="row">
+                                            <div class="col-12 px-4 py-2">
+                                                <a href="{% url 'why_choose_us' %}" class="dropdown-item border-radius-md">Why Choose Us</a>
+                                                <a href="{% url 'gcse_private_exams' %}" class="dropdown-item border-radius-md">GCSE/ IGCSE Private Exams</a>
+                                                <a href="{% url 'a_level_private_exams' %}" class="dropdown-item border-radius-md">A Level Private Exams</a>
+                                                <a href="{% url 'university_admission_test' %}" class="dropdown-item border-radius-md">University Admission Test</a>
+                                                <a href="{% url 'functional_skills_exam_centre' %}" class="dropdown-item border-radius-md">Functional Skills Exam Centre</a>
+                                                <a href="{% url 'pearson_vue_exam_centre' %}" class="dropdown-item border-radius-md">Pearson VUE Exam Centre</a>
+                                                <a href="{% url 'aat_exam_centre' %}" class="dropdown-item border-radius-md">AAT Exam Centre</a>
+                                                <a href="{% url 'trinity_exam_centre' %}" class="dropdown-item border-radius-md">Trinity Exam Centre</a>
+                                                <a href="{% url 'apply_online_exam' %}" class="dropdown-item border-radius-md">Apply Online</a>
+                                                <a href="{% url 'private_exam_fees' %}" class="dropdown-item border-radius-md">Private Exam Fees</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-none">
+                                        <a href="{% url 'why_choose_us' %}" class="dropdown-item border-radius-md">Why Choose Us</a>
+                                        <a href="{% url 'gcse_private_exams' %}" class="dropdown-item border-radius-md">GCSE/ IGCSE Private Exams</a>
+                                        <a href="{% url 'a_level_private_exams' %}" class="dropdown-item border-radius-md">A Level Private Exams</a>
+                                        <a href="{% url 'university_admission_test' %}" class="dropdown-item border-radius-md">University Admission Test</a>
+                                        <a href="{% url 'functional_skills_exam_centre' %}" class="dropdown-item border-radius-md">Functional Skills Exam Centre</a>
+                                        <a href="{% url 'pearson_vue_exam_centre' %}" class="dropdown-item border-radius-md">Pearson VUE Exam Centre</a>
+                                        <a href="{% url 'aat_exam_centre' %}" class="dropdown-item border-radius-md">AAT Exam Centre</a>
+                                        <a href="{% url 'trinity_exam_centre' %}" class="dropdown-item border-radius-md">Trinity Exam Centre</a>
+                                        <a href="{% url 'apply_online_exam' %}" class="dropdown-item border-radius-md">Apply Online</a>
+                                        <a href="{% url 'private_exam_fees' %}" class="dropdown-item border-radius-md">Private Exam Fees</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown dropdown-hover mx-2">
+                                <a role="button" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuEnglishLanguageCentre" data-bs-toggle="dropdown" aria-expanded="false">
+                                    English Language Centre
+                                    <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-animation dropdown-xl p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuEnglishLanguageCentre">
+                                    <div class="d-none d-lg-block">
+                                        <div class="row">
+                                            <div class="col-12 px-4 py-2">
+                                                <a href="{% url 'esol' %}" class="dropdown-item border-radius-md">ESOL</a>
+                                                <a href="{% url 'b1_exam' %}" class="dropdown-item border-radius-md">B1 Exam</a>
+                                                <a href="{% url 'trinity_exam_centre' %}" class="dropdown-item border-radius-md">Trinity Exam Centre</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-none">
+                                        <a href="{% url 'esol' %}" class="dropdown-item border-radius-md">ESOL</a>
+                                        <a href="{% url 'b1_exam' %}" class="dropdown-item border-radius-md">B1 Exam</a>
+                                        <a href="{% url 'trinity_exam_centre' %}" class="dropdown-item border-radius-md">Trinity Exam Centre</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'contact_us' %}" class="nav-link">Contact Us</a>
+                            </li>
+                        </ul>
+                        <a href="{% url 'enroll' %}" class="btn btn-sm bg-gradient-primary btn-round mb-0 ms-auto d-lg-block d-none">Enroll Now</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- End Navbar -->
+
+{% block content %}
+{% endblock %}
+
+<!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/yourphonenumber" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+        Any Question? Ask on WhatsApp
+    </a>
+<!-- End WhatsApp Floating Button -->
+
+<!-- -------- START FOOTER 1 w/ COMPANY DESCRIPTION AND 4 COLS ------- -->
+<footer class="footer py-7 position-relative bg-gradient-dark overflow-hidden text-light">
+      <div class="position-absolute w-100 z-index-1 top-0 mt-n3">
+    <svg width="100%" viewBox="0 -2 1920 157" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>wave-down</title>
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g fill="#FFFFFF" fill-rule="nonzero">
+                <g id="wave-down">
+                    <path d="M0,60.8320331 C299.333333,115.127115 618.333333,111.165365 959,47.8320321 C1299.66667,-15.5013009 1620.66667,-15.2062179 1920,47.8320331 L1920,156.389409 L0,156.389409 L0,60.8320331 Z" id="Path-Copy-2" transform="translate(960.000000, 78.416017) rotate(180.000000) translate(-960.000000, -78.416017) "></path>
+                </g>
+            </g>
+        </g>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="row text-white">
+      <div class="col-lg-3 mb-5 mb-lg-0">
+        <h6 class="text-uppercase mb-2">Excel Tutors</h6>
+        <p class="mb-4 pb-2">
+          Excel Tutors is a Limited Company in England and Wales with registration number 07417709.
+        </p>
+        <a href="https://www.facebook.com" target="_blank" class="text-secondary me-xl-4 me-3">
+          <span class="text-lg fab fa-facebook"></span>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="text-secondary me-xl-4 me-3">
+          <span class="text-lg fab fa-twitter"></span>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="text-secondary me-xl-4 me-3">
+          <span class="text-lg fab fa-instagram"></span>
+        </a>
+        <a href="https://www.youtube.com/@ExcelTutorsOfficial" target="_blank" class="text-secondary me-xl-4 me-3">
+          <span class="text-lg fab fa-youtube"></span>
+        </a>
+        <a href="https://www.github.com" target="_blank" class="text-secondary me-xl-4 me-3">
+          <span class="text-lg fab fa-tiktok"></span>
+        </a>
+      </div>
+      <div class="col-lg-9 mb-5 mb-lg-0">
+        <div class="row">
+          <div class="col-md-4 col-6 mb-md-0 mb-4">
+            <h6 class="text-sm">WHITECHAPEL (MAIN) BRANCH</h6>
+            <p>161-163 Commercial Road, London E1 2DA</p>
+            <p>0207 0011 411 or 07758 271568</p>
+            <p>info@exceltutors.org.uk</p>
+          </div>
+          <div class="col-md-4 col-6 mb-md-0 mb-4">
+            <h6 class="text-sm">STRATFORD BRANCH</h6>
+            <p>43 West Ham Lane, Stratford, London E15 4PH</p>
+            <p>0207 0011 411/0799 062 9840</p>
+            <p>stratford@exceltutors.org.uk</p>
+          </div>
+          <div class="col-md-4 col-6 mb-md-0 mb-4">
+            <h6 class="text-sm">DOCKLANDS BRANCH</h6>
+            <p>Westferry Community Organisation (WCO Mosque)</p>
+            <p>07493 582126</p>
+            <p>docklands@exceltutors.org.uk</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="horizontal light mt-lg-5 mt-4 mb-sm-4 mb-1">
+<div class="row text-light">
+  <div class="col-md-2 col-6 mb-md-0 mb-4">
+    <h6 class="text-sm text-white">Company</h6>
+    <ul class="flex-column ms-n3 nav">
+      <li class="nav-item text-light">
+        <a class="nav-link text-secondary" href="javascript:void(0);">About Us</a>
+      </li>
+      <li class="nav-item text-light">
+        <a class="nav-link text-secondary" href={% url 'careers' %}>Careers</a>
+      </li>
+      <li class="nav-item text-light">
+        <a class="nav-link text-secondary" href="javascript:void(0);">Press</a>
+      </li>
+      <li class="nav-item text-light">
+        <a class="nav-link text-secondary" href="javascript:void(0);">Blog</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-2 col-6 mb-md-0 mb-4">
+    <h6 class="text-sm text-white">Legal</h6>
+    <ul class="flex-column ms-n3 nav">
+      <li class="nav-item text-light">
+        <a class="nav-link text-secondary" href="javascript:void(0);">Privacy Policy</a>
+      </li>
+      <li class="nav-item text-light">
+        <a class="nav-link text-secondary" href="javascript:void(0);">Terms & Condition</a>
+      </li>
+      <li class="nav-item text-light">
+        <a class="nav-link text-secondary" href="javascript:void(0);">Safeguarding Policy</a>
+      </li>
+      <li class="nav-item text-light">
+        <a class="nav-link text-secondary" href="javascript:void(0);">Complaints Policy</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-2 col-6 mb-md-0 mb-4">
+    <h6 class="text-sm text-white"></h6>
+    <ul class="flex-column ms-n3 nav">
+      <li class="nav-item text-light">
+        <a class="nav-link text-secondary" href="javascript:void(0);">Private Candidate Terms and Condition</a>
+      </li>
+      <li class="nav-item text-light">
+        <a class="nav-link text-secondary" href="javascript:void(0);">Refund Policy</a>
+      </li>
+      <li class="nav-item text-light">
+        <a class="nav-link text-secondary" href="javascript:void(0);">Cookies Policy</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <hr class="horizontal light mt-lg-5 mt-4 mb-sm-4 mb-1">
+    <div class="row">
+      <div class="col-8 mx-lg-auto text-lg-center">
+        <p class="text-sm text-secondary text-white">
+          Copyright © <script>document.write(new Date().getFullYear())</script> Excel Tutors.
+        </p>
+        <p class="text-sm text-white">
+          Designed, Developed and Maintained with <span style="color: red;">❤</span> by <a class="text-white" href="https://blueprintdigitaldynamics.com/" target="_blank">Blueprint Digital Dynamics</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- -------- END FOOTER 1 w/ COMPANY DESCRIPTION AND 4 COLS ------- -->
+
+
+<style>
+        .whatsapp-float {
+            position: fixed;
+            width: 320px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 16px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            background-color: #1ebea5;
+            color: #fff;
+            text-decoration: none;
+        }
+        .whatsapp-icon {
+            margin-right: 10px;
+            margin-left: 10px;
+            font-size: 25px;
+        }
+    </style>
+<!-- Core JS Files -->
+<script src="{% static 'js/core/popper.min.js' %}"></script>
+<script src="{% static 'js/core/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/plugins/perfect-scrollbar.min.js' %}"></script>
+<script src="{% static 'js/plugins/tilt.min.js' %}"></script>
+<script src="{% static 'js/plugins/parallax.min.js' %}"></script>
+<script src="{% static 'js/soft-design-system-pro.min.js' %}"></script>
+</body>
+</html>
