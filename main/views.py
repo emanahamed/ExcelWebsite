@@ -1,5 +1,7 @@
-from django.shortcuts import render
 from .models import ExamDetail
+from django.core.mail import send_mail
+from django.shortcuts import render, redirect
+from django.contrib import messages
 
 def home(request):
     return render(request, 'home.html')
@@ -36,6 +38,8 @@ def university_admission_preparation(request):
 def summer_school(request):
     return render(request, 'summer_school.html')
 
+def generic_exam_page(request):
+    return render(request, 'generic_exam_page.html')
 
 def why_choose_us(request):
     return render(request, 'why_choose_us.html')
@@ -103,3 +107,13 @@ def contact_us(request):
 
 def careers(request):
     return render(request, 'careers.html')
+
+
+def science_tuition(request):
+    return render(request, 'science_tuition.html')
+def english_tuition(request):
+    return render(request, 'english_tuition.html')
+def maths_tuition(request):
+    return render(request, 'maths_tuition.html')
+def cs_tuition(request):
+    return render(request, 'cs_tuition.html')

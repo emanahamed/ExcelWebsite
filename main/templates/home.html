@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-{% block title %}Tuition and Private Exam Centre in East London{% endblock %}
+{% block title %}Tuition and Private Exam Centre in East London. London's Best Tuition Centre{% endblock %}
 {% load static %}
 {% block content %}
     <header class="">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="page-header min-vh-75 m-3 border-radius-xl" style="background-image: url(https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/mark.jpg);">
+                    <div class="page-header min-vh-75 m-3 border-radius-xl" style="background-image: url({% static '/img/studentimages/7.png' %});">
                         <span class="mask bg-gradient-dark"></span>
                         <div class="container">
                             <div class="row">
@@ -14,6 +14,7 @@
                                     <h4 class="text-white mb-0 fadeIn1 fadeInBottom">GCSE &amp; A Level Tutoring</h4>
                                     <h1 class="text-white fadeIn2 fadeInBottom">Enrol Now for GCSE &amp; A Level Tutoring</h1>
                                     <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">Boost your grades with expert tutoring in Maths, English, Science, and more. Enrol now and start your journey to GCSE success with personalized support and targeted lessons.</p>
+                                    <a href="{% url 'enroll' %}" class='btn btn-primary'>Enrol Now</a>
                                 </div>
                             </div>
                         </div>
@@ -40,7 +41,7 @@
                                     <div class="description ps-4">
                                         <h5 class="text-white">GCSE and A-Level Tutoring</h5>
                                         <p class="text-white">Excel Tutors offers targeted tutoring from Year 3 to A-Levels in Maths, English, Science, Computer Science, Business, and Economics. Our expert tutors customise lessons to enhance students' academic potential and performance in key examinations.</p>
-                                        <a href="javascript:;" class="text-white icon-move-right">
+                                        <a href="{% url 'about_us' %}" class="text-white icon-move-right">
                                             More about us
                                             <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                                         </a>
@@ -70,7 +71,7 @@
                                     <div class="description ps-4">
                                         <h5>11+ Admission Preparation</h5>
                                         <p>Our 11+ preparation program focuses on English, Maths, Verbal, and Non-Verbal Reasoning to help students succeed in competitive grammar and private school entrance exams. Experienced tutors provide practice tests and personalised coaching to boost confidence and skills.</p>
-                                        <a href="javascript:;" class="text-primary icon-move-right">
+                                        <a href="{% url 'about_us' %}" class="text-primary icon-move-right">
                                             More about us
                                             <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                                         </a>
@@ -97,7 +98,7 @@
                                     <div class="description ps-4">
                                         <h5>Private Exam Centre</h5>
                                         <p>As a certified Private Exam Centre, Excel Tutors conducts GCSE, IGCSE, and A-Level exams for private candidates. We support home-schooled students, adult learners, and those retaking exams, offering a professional environment and comprehensive guidance.</p>
-                                        <a href="javascript:;" class="text-primary icon-move-right">
+                                        <a href="{% url 'about_us' %}" class="text-primary icon-move-right">
                                             More about us
                                             <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                                         </a>
@@ -108,7 +109,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="page-header min-vh-75 m-3 border-radius-xl" style="background-image: url(https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/meeting.jpg);">
+                    <div class="page-header min-vh-75 m-3 border-radius-xl" style="background-image: url({% static '/img/studentimages/15.png' %});">
                         <span class="mask bg-gradient-dark"></span>
                         <div class="container">
                             <div class="row">
@@ -116,6 +117,7 @@
                                     <h4 class="text-white mb-0 fadeIn1 fadeInBottom">11+ Prep</h4>
                                     <h1 class="text-white fadeIn2 fadeInBottom">Register for 11+ Preparation</h1>
                                     <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">Secure your child's place in top grammar and private schools with our comprehensive 11+ preparation. Register your interest today and take the first step towards success in English, Maths, and Reasoning.</p>
+                                    <a href="{% url 'enroll' %}" class='btn btn-primary'>Book a Free Assessment Now</a>
                                 </div>
                             </div>
                         </div>
@@ -220,6 +222,7 @@
                                     <h4 class="text-white mb-0 fadeIn1 fadeInBottom">Private Exam Centre</h4>
                                     <h1 class="text-white fadeIn2 fadeInBottom">Book Your Exam Slot</h1>
                                     <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">Would you be ready to complete your qualifications? Book an assessment for GCSEs, IGCSEs, and A-Levels at our accredited exam centre. Achieve your academic goals in a supportive and professional environment.</p>
+                                    <a href="{% url 'apply_online_exam' %}" class='btn btn-primary'>Register Now</a>
                                 </div>
                             </div>
                         </div>
@@ -246,7 +249,7 @@
                                     <div class="description ps-4">
                                         <h5>GCSE and A-Level Tutoring</h5>
                                         <p>Excel Tutors offers targeted tutoring from Year 3 to A-Levels in Maths, English, Science, Computer Science, Business, and Economics. Our expert tutors customise lessons to enhance students' academic potential and performance in key examinations.</p>
-                                        <a href="javascript:;" class="text-dark icon-move-right">
+                                        <a href="{% url 'about_us' %}" class="text-dark icon-move-right">
                                             More about us
                                             <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                                         </a>
@@ -273,7 +276,7 @@
                                     <div class="description ps-4">
                                         <h5>11+ Admission Preparation</h5>
                                         <p>Our 11+ preparation program focuses on English, Maths, Verbal, and Non-Verbal Reasoning to help students succeed in competitive grammar and private school entrance exams. Experienced tutors provide practice tests and personalised coaching to boost confidence and skills.</p>
-                                        <a href="javascript:;" class="text-dark icon-move-right">
+                                        <a href="{% url 'about_us' %}" class="text-dark icon-move-right">
                                             More about us
                                             <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                                         </a>
@@ -301,7 +304,7 @@
                                     <div class="description ps-4">
                                         <h5 class="text-white">Private Exam Centre</h5>
                                         <p class="text-white">As a certified Private Exam Centre, Excel Tutors conducts GCSE, IGCSE, and A-Level exams for private candidates. We support home-schooled students, adult learners, and those retaking exams, offering a professional environment and comprehensive guidance.</p>
-                                        <a href="javascript:;" class="text-white icon-move-right">
+                                        <a href="{% url 'about_us' %}" class="text-white icon-move-right">
                                             More about us
                                             <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                                         </a>
@@ -370,19 +373,17 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-md-0 mb-4">
+                    <h3>Welcome to Excel Tutors</h3>
                     <h3 class="text-gradient text-primary mb-0">Give Your Child a Brighter Future</h3>
-                    <h3>Very nice subtitle</h3>
                     <p class="lead mb-md-5 mb-4">
-                        Change the color to match your brand or vision, add your logo, choose the perfect thumbnail, remove the playbar, add controls and more.
+                        Excel Tutors was founded on a philosophy that every child is unique and therefore requires specially contrived teaching and learning methods and strategy which meet the individual specific needs of learners to enhance their high level educational achievement. This forms the pivot on which our approach to teaching and learning revolves.
+                        <br>
+                        From its inception till date, Excel Tutors has made significant strides in pedagogy in the field of education, focusing on supporting young learners, adopting bespoke and tailor measured teaching and learning strategy. Excel Tutors has earned an enviable place in the Tower Hamlets community, through dedication and commitment of our management team and Tutors, determining the different pathways in which every learner can be supported to achieve greater heights in their learning journey.
                     </p>
-                    <p><span class="me-2">●</span> Showcase and embed your work with</p>
-                    <p><span class="me-2">●</span> Publish across social channels in a click</p>
-                    <p><span class="me-2">●</span> Sell your videos worldwide</p>
-                    <p><span class="me-2">●</span> Make more profit</p>
                 </div>
                 <div class="col-md-6">
                     <div class="blur-shadow-image text-center">
-                        <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/curved-images/curved5.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg max-height-600">
+                        <img src="static/img/staffimages/Anis Portrait.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg max-height-600">
                     </div>
                 </div>
             </div>
@@ -396,7 +397,7 @@
                     <p></p>
                 </div>
                 <div class="col-lg-6 text-end d-flex flex-column justify-content-center">
-                    <button type="button" class="btn bg-gradient-info mb-0 ms-lg-auto me-lg-0 me-auto mt-lg-0 mt-2">Contact Us</button>
+                    <button onclick="{% url 'contact_us' %}" type="button" class="btn bg-gradient-info mb-0 ms-lg-auto me-lg-0 me-auto mt-lg-0 mt-2">Contact Us</button>
                 </div>
             </div>
             <div class="row mt-5">
@@ -472,7 +473,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto text-center">
-                    <h2 class="text-gradient text-primary mb-0">What other people</h2>
+                    <h2 class="text-gradient text-primary mb-0">What our Students</h2>
                     <h2 class="mb-3">Think about us</h2>
                     <p>That’s the main thing people are controlled by! Thoughts- their perception of themselves! </p>
                 </div>
@@ -482,21 +483,21 @@
                     <div class="card card-plain">
                         <div class="card-body">
                             <div class="author">
-                                <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-3.jpg" alt="..." class="avatar shadow">
+                                <img src="static/img/studentimages/Joseph.png" alt="..." class="avatar shadow">
                                 <div class="name ps-2">
-                                    <span>Mathew Glock</span>
+                                    <span>Joseph Kassar</span>
                                     <div class="stats">
-                                        <small><i class="far fa-clock" aria-hidden="true"></i> 5 min read</small>
+                                        <small><i class="far fa-clock" aria-hidden="true"></i> St. Olaves Grammar School</small>
                                     </div>
                                 </div>
                             </div>
-                            <p class="mt-4">"If you have the opportunity to play this game of life you need to appreciate every moment."</p>
+                            <p class="mt-4">"I have been coming to Excel for the duration of my GCSE studies, and I can undoubtedly say that without the help of the amazing tutors I had at Excel, my results would not have been possible. I would strongly recommend Excel Tutors for anyone who wants to do well in their studies."</p>
                             <div class="rating mt-3">
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
-                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                     </div>
@@ -505,20 +506,20 @@
                     <div class="card bg-gradient-primary">
                         <div class="card-body">
                             <div class="author align-items-center">
-                                <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/marie.jpg" alt="..." class="avatar shadow">
+                                <img src="static/img/studentimages/Adrita.jpg" alt="..." class="avatar shadow">
                                 <div class="name ps-2">
-                                    <span class="text-white">Mathew Glock</span>
+                                    <span class="text-white">Adrita Rahman</span>
                                     <div class="stats">
-                                        <small class="text-white">Posted on 28 February</small>
+                                        <small class="text-white">Westcliff High School for Girls’</small>
                                     </div>
                                 </div>
                             </div>
-                            <p class="mt-4 text-white">"If you have the opportunity to play this game of life you need to appreciate every moment."</p>
+                            <p class="mt-4 text-white">"I have been at Excel from a very young age, and I can confidently say that the tutors here have guided me so much in my academic endeavours, which includes my 11+, and my GCSE. Especially during the critical period of year 11, I was given all the revision resources I could possibly need, and my tutors helped me a lot in cleaning up any doubts I had. I hope to succeed in my A-Levels too, with the help and guidance from Excel."</p>
                             <div class="rating mt-3">
                                 <i class="fas fa-star text-white" aria-hidden="true"></i>
                                 <i class="fas fa-star text-white" aria-hidden="true"></i>
                                 <i class="fas fa-star text-white" aria-hidden="true"></i>
-                                <i class="far fa-star text-white" aria-hidden="true"></i>
+                                <i class="fas fa-star text-white" aria-hidden="true"></i>
                                 <i class="far fa-star text-white" aria-hidden="true"></i>
                             </div>
                         </div>
@@ -555,7 +556,6 @@
             <div class="row my-5">
                 <div class="col-md-6 mx-auto text-center">
                     <h2>Frequently Asked Questions</h2>
-                    <p>A lot of people don't appreciate the moment until it’s passed. I'm not trying my hardest, and I'm not trying to do </p>
                 </div>
             </div>
             <div class="row">
@@ -564,77 +564,126 @@
                         <div class="accordion-item mb-3">
                             <h5 class="accordion-header" id="headingOne">
                                 <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How do I order?
+                                    How qualified are your Tutors?
                                     <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                     <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                 </button>
                             </h5>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionRental">
                                 <div class="accordion-body text-dark text-sm opacity-8">
-                                    We’re not always in the position that we want to be at. We’re constantly growing. We’re constantly making mistakes. We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game
-                                    of life you need to appreciate every moment. A lot of people don’t appreciate the moment until it’s passed.
+                                    All our Tutors our specialists in their area of tutoring with continuous training provided in
+terms of tutoring small class sizes.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item mb-3">
                             <h5 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How can i make the payment?
+                                    What is the fee structure?
+
+
                                     <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                     <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                 </button>
                             </h5>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionRental">
                                 <div class="accordion-body text-dark text-sm opacity-8">
-                                    It really matters and then like it really doesn’t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn’t matter. Because it's about motivating the doers. Because I’m here to follow my dreams and inspire other people to follow their dreams, too.
-                                    <br>
-                                    We’re not always in the position that we want to be at. We’re constantly growing. We’re constantly making mistakes. We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game of life you need to appreciate every moment. A lot of people don’t appreciate the moment until it’s passed.
+                                    Fees are payable on monthly basis on agreed dates. Further information can be found here.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item mb-3">
                             <h5 class="accordion-header" id="headingThree">
                                 <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    How much time does it take to receive the order?
+                                    What are the class sizes?
+
                                     <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                     <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                 </button>
                             </h5>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionRental">
                                 <div class="accordion-body text-dark text-sm opacity-8">
-                                    The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?
-                                    If everything I did failed - which it doesn't, it actually succeeds - just the fact that I'm willing to fail is an inspiration. People are so scared to lose that they don't even try. Like, one thing people can't say is that I'm not trying, and I'm not trying my hardest, and I'm not trying to do the best way I know how.
-                                </div>
+Excel Tutors maintains small class sizes of maximum 4 learners per Tutor.
+                                   </div>
                             </div>
                         </div>
                         <div class="accordion-item mb-3">
                             <h5 class="accordion-header" id="headingFour">
                                 <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Can I resell the products?
+                                    What time slots are available?
                                     <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                     <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                 </button>
                             </h5>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionRental">
                                 <div class="accordion-body text-dark text-sm opacity-8">
-                                    I always felt like I could do anything. That’s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can’t do anything, you won’t do anything. I was taught I could do everything.
-                                    <br><br>
-                                    If everything I did failed - which it doesn't, it actually succeeds - just the fact that I'm willing to fail is an inspiration. People are so scared to lose that they don't even try. Like, one thing people can't say is that I'm not trying, and I'm not trying my hardest, and I'm not trying to do the best way I know how.
-                                </div>
+                                   Weekdays: 5 – 7<br>
+Weekend: 9 – 6
+Each slot is two hours long with 10 minutes break for smooth transfer from one slot to another.
+</div>
                             </div>
                         </div>
                         <div class="accordion-item mb-3">
                             <h5 class="accordion-header" id="headingFifth">
                                 <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifth" aria-expanded="false" aria-controls="collapseFifth">
-                                    Where do I find the shipping details?
+                                    Cover Lesson Arrangements
+
                                     <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                     <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                 </button>
                             </h5>
                             <div id="collapseFifth" class="accordion-collapse collapse" aria-labelledby="headingFifth" data-bs-parent="#accordionRental">
                                 <div class="accordion-body text-dark text-sm opacity-8">
-                                    There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented at anything except for the ability to learn. That’s what I do. That’s what I’m here for. Don’t be afraid to be wrong because you can’t learn anything from a compliment.
-                                    I always felt like I could do anything. That’s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can’t do anything, you won’t do anything. I was taught I could do everything.
+
+Excel Tutor has a policy on arrangement for cover lessons where a child misses a class. Details can be found here.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h5 class="accordion-header" id="headingFifth">
+                                <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixth" aria-expanded="false" aria-controls="collapseFifth">
+                                    Does Excel Tutors offer support for a child’s school homework?
+
+                                    <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
+                                    <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
+                                </button>
+                            </h5>
+                            <div id="collapseSixth" class="accordion-collapse collapse" aria-labelledby="headingSixth" data-bs-parent="#accordionRental">
+                                <div class="accordion-body text-dark text-sm opacity-8">
+                                    Excel Tutors will help your child where they need homework support.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h5 class="accordion-header" id="headingSeventh">
+                                <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventh" aria-expanded="false" aria-controls="collapseSeventh">
+                                    When can parents meet with Tutors?
+
+
+                                    <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
+                                    <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
+                                </button>
+                            </h5>
+                            <div id="collapseSeventh" class="accordion-collapse collapse" aria-labelledby="headingSeventh" data-bs-parent="#accordionRental">
+                                <div class="accordion-body text-dark text-sm opacity-8">
+                                    Excel Tutors makes arrangements for Parent–Tutors meetings three times a year.
+Individual parents can also book an appointment to meet with specific Tutors on their child’s progress and performance.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h5 class="accordion-header" id="headingEighth">
+                                <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEighth" aria-expanded="false" aria-controls="collapseEighth">
+                                    Will my child be given any workbooks?
+
+                                    <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
+                                    <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
+                                </button>
+                            </h5>
+                            <div id="collapseEighth" class="accordion-collapse collapse" aria-labelledby="headingEighth" data-bs-parent="#accordionRental">
+                                <div class="accordion-body text-dark text-sm opacity-8">
+                                    Workbooks are central to your child’s performance and we advise that your child is supplied with a set of workbooks. The completion of the workbooks will enhance your child’s progress and performance.
+
                                 </div>
                             </div>
                         </div>
@@ -644,135 +693,124 @@
         </div>
     </section>
     <section class="py-5 position-relative">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mx-auto text-center">
-                    <h2>Contact Us</h2>
-                    <p class="lead">Amy questions or remarks? Just write us a messaage!</p>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto text-center">
+                <h2>Contact Us</h2>
+                <p class="lead">Any questions or remarks? Just write us a message!</p>
             </div>
-            <div class="row mt-5">
-                <div class="col-lg-10 mx-auto">
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-lg-5 d-flex">
-                                <div class="bg-gradient-dark my-lg-3 ms-lg-3 border-radius-md">
-                                    <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute start-0 top-0 h-100 opacity-6">
-                                    <div class="card-body p-5 position-relative">
-                                        <h3 class="text-white">Contact Information</h3>
-                                        <p class="text-white opacity-8 mb-4">Fill up the form and our Team will get back to you within 24 hours.</p>
-                                        <div class="d-flex p-2 text-white">
-                                            <div>
-                                                <i class="fas fa-phone text-sm" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="ps-3">
-                                                <span class="text-sm opacity-8">0207 0011 411</span>
-                                            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-10 mx-auto">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-lg-5 d-flex">
+                            <div class="bg-gradient-dark my-lg-3 ms-lg-3 border-radius-md">
+                                <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute start-0 top-0 h-100 opacity-6">
+                                <div class="card-body p-5 position-relative">
+                                    <h3 class="text-white">Contact Information</h3>
+                                    <p class="text-white opacity-8 mb-4">Fill up the form and our Team will get back to you within 24 hours.</p>
+                                    <div class="d-flex p-2 text-white">
+                                        <div>
+                                            <i class="fas fa-phone text-sm" aria-hidden="true"></i>
                                         </div>
-                                        <div class="d-flex p-2 text-white">
-                                            <div>
-                                                <i class="fas fa-envelope text-sm" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="ps-3">
-                                                <span class="text-sm opacity-8">nfo@exceltutors.org.uk</span>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex p-2 text-white">
-                                            <div>
-                                                <i class="fas fa-map-marker-alt text-sm" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="ps-3">
-                                                <span class="text-sm opacity-8">
-                                                    <div>161-163 Commercial Road, <br>London E1 2DA<br><br></div>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="mt-4">
-                                            <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Facebook">
-                                                <i class="fab fa-facebook" aria-hidden="true"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Twitter">
-                                                <i class="fab fa-twitter" aria-hidden="true"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Dribbble">
-                                                <i class="fab fa-dribbble" aria-hidden="true"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Instagram">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </button>
+                                        <div class="ps-3">
+                                            <span class="text-sm opacity-8">0207 0011 411</span>
                                         </div>
                                     </div>
+                                    <div class="d-flex p-2 text-white">
+                                        <div>
+                                            <i class="fas fa-envelope text-sm" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <span class="text-sm opacity-8">info@exceltutors.org.uk</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex p-2 text-white">
+                                        <div>
+                                            <i class="fas fa-map-marker-alt text-sm" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <span class="text-sm opacity-8">
+                                                <div>161-163 Commercial Road, <br>London E1 2DA<br><br></div>
+                                            </span>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="col-lg-7">
-                                <form id="contact-form" method="post" autocomplete="off" data-gtm-form-interact-id="0">
-                                    <div class="card-body position-relative p-3 ps-0">
-                                        <div class="row mt-4">
-                                            <div class="col-md-6">
-                                                <label>First name</label>
-                                                <div class="input-group mb-4">
-                                                    <input class="form-control" placeholder="eg. Lucas" aria-label="First Name..." type="text">
-                                                </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <form id="contact-form" method="post" autocomplete="off" data-gtm-form-interact-id="0">
+                                {% csrf_token %}
+                                <div class="card-body position-relative p-3 ps-0">
+                                    <div class="row mt-4">
+                                        <div class="col-md-6">
+                                            <label>First name</label>
+                                            <div class="input-group mb-4">
+                                                <input class="form-control" name="first_name" placeholder="eg. Lucas" aria-label="First Name..." type="text">
                                             </div>
-                                            <div class="col-md-6 ps-2">
-                                                <label>Last name</label>
-                                                <div class="input-group mb-4">
-                                                    <input type="text" class="form-control" placeholder="eg. Jones" aria-label="Last Name...">
-                                                </div>
+                                        </div>
+                                        <div class="col-md-6 ps-2">
+                                            <label>Last name</label>
+                                            <div class="input-group mb-4">
+                                                <input type="text" class="form-control" name="last_name" placeholder="eg. Jones" aria-label="Last Name...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label>Email address</label>
+                                        <div class="input-group mb-4">
+                                            <input type="email" class="form-control" name="email" placeholder="eg. lucas@gmail.com">
+                                        </div>
+                                    </div>
+                                    <label>What are you interested in?</label>
+                                    <div class="d-flex">
+                                        <div>
+                                            <div class="form-check me-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Tuition" checked>
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    Tuition</label>
                                             </div>
                                         </div>
                                         <div>
-                                            <label>Email address</label>
-                                            <div class="input-group mb-4">
-                                                <input type="email" class="form-control" placeholder="eg. lucas@creative-tim.com">
+                                            <div class="form-check me-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="11+ Preparation">
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    11+ Preparation</label>
                                             </div>
                                         </div>
-                                        <label>What are you interested on?</label>
-                                        <div class="d-flex">
-                                            <div>
-                                                <div class="form-check me-3">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="">
-                                                    <label class="form-check-label" for="flexRadioDefault1">
-                                                        Tuition</label>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="form-check me-3">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" data-gtm-form-interact-field-id="0">
-                                                    <label class="form-check-label" for="flexRadioDefault2">
-                                                        11+ Preparation</label>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="form-check me-3">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" data-gtm-form-interact-field-id="1">
-                                                    <label class="form-check-label" for="flexRadioDefault3">
-                                                        Private Exam</label>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
-                                                    <label class="form-check-label" for="flexRadioDefault4">
-                                                        Other
-                                                    </label>
-                                                </div>
+                                        <div>
+                                            <div class="form-check me-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="Private Exam">
+                                                <label class="form-check-label" for="flexRadioDefault3">
+                                                    Private Exam</label>
                                             </div>
                                         </div>
-                                        <div class="form-group mt-4">
-                                            <label>Your message</label>
-                                            <textarea name="message" class="form-control" id="message" rows="3"></textarea>
-                                        </div>
-                                        <div class="text-end">
-                                            <button type="button" class="btn bg-gradient-dark mb-0">Send message</button>
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value="Other">
+                                                <label class="form-check-label" for="flexRadioDefault4">
+                                                    Other
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
+                                    <div class="form-group mt-4">
+                                        <label>Your message</label>
+                                        <textarea name="message" class="form-control" id="message" rows="3"></textarea>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn bg-gradient-dark mb-0">Send message</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 {% endblock %}
